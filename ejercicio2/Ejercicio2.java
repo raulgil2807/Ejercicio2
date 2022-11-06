@@ -1,16 +1,18 @@
 package com.ejercicio2;
 
+import java.util.Scanner;
+
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        double resultado = calcularIVA(100);
-        System.out.println("El precio del producto con el IVA incluido " + resultado);
-        }
 
-    static double calcularIVA(double precio) {
-        final double iva= 0.19;
-        double resultado = 0;
-        resultado = iva * resultado;
-        return resultado;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número: ");
+
+        int numero = scanner.nextInt();
+        double iva = numero * 0.19;
+        double suma = numero + iva;
+
+        System.out.println("El precio con IVA es: " + suma);
     }
 }
